@@ -54,9 +54,6 @@ for a in range(1, 1000):
         status = res['errors'][0]['message']
     else:
         status = res
+        open('result.txt', 'a').write(f'{cp} {res}\n')
 
-    print(f'[{a}] Coupon : {cp}\nStatus: {status}')
-
-# cp = getCoupon()
-# res = checkCoupon(cp)
-# print(f'[] Coupom : {cp}\nStatus: {res}')
+    print(f'[{a}] {cp} : {status}')
